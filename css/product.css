@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  align-items: right;
+  justify-content: center;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.grid_1_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10%;
+  column-gap: 5%;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+.addtocart {
+  background-color: #fff;
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+button {
+  margin-top: 3rem;
+  padding: 0.5rem;
+}
+
+.tilføj_kurv:hover {
+  color: #fff;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+}
+a,
+li {
+  color: #fff;
+  text-decoration: none;
+  list-style: none;
+}
+.størrelse {
+  color: black;
+  list-style: none;
+  padding: 0.2rem;
+}
+
+ol {
+  display: flex;
+  grid-column: 1/-1;
+}
+
+li {
+  padding-right: 0.5rem;
+}
