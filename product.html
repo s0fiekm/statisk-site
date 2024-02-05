@@ -2,29 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=¨, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/product.css" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Product</title>
   </head>
   <body>
     <header></header>
     <main>
-      <div class="grid_1_1">
-        <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>/</li>
-          <li><a href="brands.html">Brands</a></li>
-          <li>/</li>
-          <li><a href="productlist.html">Apparel</a></li>
-          <li>/</li>
-          <li>Puma Unisex Logo T-shirt</li>
-        </ol>
-        <img src="https://kea-alt-del.dk/t7/images/webp/640/1533.webp" alt="" />
+      <section class="grid_1_1">
         <div>
-          <h2>Puma</h2>
-          <h3>Unisex Logo T-shirt</h3>
-          <p>DKK 500,-</p>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>/</li>
+            <li><a href="brands.html">Brands</a></li>
+            <li>/</li>
+            <li><a href="productlist.html">Apparel</a></li>
+            <li>/</li>
+            <li>Puma Unisex Logo T-shirt</li>
+          </ol>
+        </div>
+
+        <article>
+          <div>
+            <img
+              src="https://kea-alt-del.dk/t7/images/webp/640/1533.webp"
+              alt="" />
+          </div>
+          <div class="purchaseBox">
+            <h2>Puma</h2>
+            <h3>Unisex Logo T-shirt</h3>
+            <p>DKK<span class="price">500</span>,-</p>
+          </div>
+        </article>
+
+        <div>
           <ul>
             <li class="størrelse"><button>XS</button></li>
             <li class="størrelse"><button>S</button></li>
@@ -32,12 +44,13 @@
             <li class="størrelse"><button>L</button></li>
             <li class="størrelse"><button>XL</button></li>
           </ul>
-          <section class="tilføj_kurv">
+          <div class="tilføj_kurv">
             <button class="addtocart">ADD TO CART</button>
-          </section>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
+    <script src="js/product.js"></script>
     <footer></footer>
   </body>
 </html>
