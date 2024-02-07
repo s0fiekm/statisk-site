@@ -5,58 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/productlist.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/prp0yiw.css" />
     <title>Document</title>
   </head>
   <body>
     <header></header>
-    <main class="grid_1_1_1_1">
-        <h2 class="brandnavn">PUMA</h2>
-        <template id="produktTemplate">
-          <article class="produkt">
-            <a class="readMore" href="product.html"
-              ><img
-                src="https://kea-alt-del.dk/t7/images/webp/640/1533.webp"
-                alt=""
-            /></a>
-            <h3>Puma</h3>
-            <p>Unisex Logo T-shirt</p>
-            <p class="pris">DKK 400,-</p>
-          </article>
-        </template>
-        <!-- <article class="produkt soldOut">
-          <div>
+    <main>
+      <h1 class="FASHION4U">CURATED FASHION</h1>
+      <h2 class="brandnavn">PUMA</h2>
+      <template>
+        <article class="produkt">
+          <div class="soldOut">
             <div class="tekstPåBillede">
               <p class="tekst">SOLD OUT</p>
             </div>
-            <a href="product.html"
-              ><img
-                src="https://kea-alt-del.dk/t7/images/webp/640/1533.webp"
-                alt=""
-            /></a>
           </div>
-          <h3>Puma</h3>
-          <p>Unisex Logo T-shirt</p>
-          <p class="pris">DKK 400,-</p>
-        </article>
-        <article class="produkt onSale">
-          <div>
+          <div class="onSale">
             <div class="tekstPåBillede">
               <p class="tekst">ON SALE</p>
             </div>
-            <a href="product.html"
-              ><img
-                src="https://kea-alt-del.dk/t7/images/webp/640/1533.webp"
-                alt=""
-            /></a>
           </div>
-          <h3>Puma</h3>
-          <p>Unisex Logo T-shirt</p>
-          <div class="udsalg">
-            <p class="pris">DKK 400,-</p>
-            <p class="førpris">DKK 500,-</p>
+          <a class="readMore" href="product.html"
+            ><img
+              src="https://kea-alt-del.dk/t7/images/webp/640/1533.webp"
+              alt=""
+          /></a>
+          <p>
+            <span class="mærke">PUMA</span>
+            <span class="navnPåProdukt">UNISEX LOGO T-SHIRT</span>
+          </p>
+          <div class="priser">
+            <p>DKK<span class="pris">400</span></p>
+            <p><span class="ny_pris">DKK 400</span></p>
           </div>
-        </article> -->
-      </div>
+        </article>
+      </template>
     </main>
     <script src="js/productlist.js"></script>
   </body>

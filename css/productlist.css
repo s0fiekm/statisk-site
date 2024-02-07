@@ -1,18 +1,46 @@
 body {
-  display: flex;
-  align-items: right;
-  justify-content: center;
   margin: 0;
 }
 
-.grid_1_1_1_1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  row-gap: 1%;
+main {
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
+.indhold {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.produkt:first-child {
+  margin-left: 50%;
+}
+
+.brandnavn {
+  display: flex;
+  margin-top: 1%;
+  grid-column: span 4;
+  font-family: "Helvetica Arial", sans-serif;
+}
+
+.FASHION4U {
+  font-weight: 400;
+  font-size: 2rem;
+  display: flex;
+  margin-top: 1%;
+  grid-column: span 4;
+  justify-content: left;
+  font-family: "Helvetica Arial", sans-serif;
+  font-weight: 800;
+  font-size: 4rem;
+  font-style: normal;
+  border-bottom: 2px solid grey;
+}
+
+/*toolbar og brandnavn */
+
 img {
-  width: 99%;
+  width: 100%;
 }
 
 ul {
@@ -21,41 +49,45 @@ ul {
 
 li {
   list-style: none;
-  color: aliceblue;
+  color: #000;
 }
 
-.produkt {
-  display: flex;
-  flex-direction: column;
-}
+/*klasser udsalg og udsolgt*/
+
 .pris {
-  color: gray;
-}
-
-.brandnavn {
-  display: flex;
-  grid-column: 1/-1;
+  color: black;
 }
 
 .udsalg {
   display: flex;
-  flex-direction: row;
 }
 
 .førpris {
   color: gray;
-  padding-left: 5%;
+  padding-right: 10px;
   text-decoration: line-through;
 }
 
 .tekstPåBillede {
   position: absolute;
-  background-color: #e8e8e8;
   padding: 2px;
 }
 
 .tekst {
   font-size: 1rem;
-  font-family: "Helvetica neue", sans-serif;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 700;
   font-weight: 100;
+  font-style: normal;
+}
+
+.priser {
+  display: flex;
+  flex-direction: row;
+}
+
+.navnPåProdukt,
+.mærke {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-size: 1.5rem;
 }
