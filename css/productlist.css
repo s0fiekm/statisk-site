@@ -3,17 +3,10 @@ body {
 }
 
 main {
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.indhold {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.produkt:first-child {
-  margin-left: 50%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .brandnavn {
@@ -62,15 +55,17 @@ li {
   display: flex;
 }
 
-.førpris {
-  color: gray;
-  padding-right: 10px;
-  text-decoration: line-through;
-}
-
 .tekstPåBillede {
   position: absolute;
   padding: 2px;
+}
+
+.regularPrice {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  padding-right: 10px;
+  text-decoration: line-through;
+  color: #32cd32;
+  text-decoration: line-through;
 }
 
 .tekst {
@@ -81,7 +76,7 @@ li {
   font-style: normal;
 }
 
-.priser {
+.prices {
   display: flex;
   flex-direction: row;
 }

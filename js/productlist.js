@@ -3,7 +3,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const brandname = urlParams.get("brandname");
 
-fetch("https://kea-alt-del.dk/t7/api/products?brandname=" + brandname)
+fetch("https://kea-alt-del.dk/t7/api/products?brandnames=" + brandname)
   .then((res) => res.json())
   .then(showProducts);
 
@@ -13,7 +13,6 @@ function showProducts(products) {
 }
 
 function showProduct(product) {
-  console.log(product);
   //fang template
   const template = document.querySelector("template").content;
   //lav en kopi
@@ -37,52 +36,15 @@ function showProduct(product) {
     copy.querySelector(".soldOut").remove();
   }
 
-  if (product.discount == null) {
-    copy.querySelector(".onSale").remove();
+  if (product.discount !== null) {
+    // Produktet er på tilbud
+    // Tilføj klassen "onSale" til ".prices" containeren
+    copy.querySelector(".prices").classList.add(".regularPrice");
+  } else {
+    // Produktet er ikke på tilbud
+    // Fjern ".onSale" elementet
+    copy.querySelector(".regularPrice").remove();
   }
-
-  if (product.discount == null) {
-    copy.querySelector(".dk_pris").remove();
-  }
-
-  if (product.discount == null) {
-    copy.querySelector(".ny_pris").remove();
-  }
-
-  if (product.discount > null) {
-    copy.querySelector(".ny_pris");
-  }
-
   //appende
-  document.querySelector("main.grid_1_1_1_1").appendChild(copy);
+  document.querySelector("main").appendChild(copy);
 }
-
-/*
-  <template id="produktTemplate">
-          <article class="produkt">
-            <a href="product.html"
-              ><img
-                src="https://kea-alt-del.dk/t7/images/webp/640/1533.webp"
-                alt=""
-            /></a>
-            <h3>Puma</h3>
-            <p>Unisex Logo T-shirt</p>
-            <p class="pris">DKK 400,-</p>
-          </article>
-        </template>
-
-
-{id: 1163, gender: 'Men', category: 'Apparel', subcategory: 'Topwear', articletype: 'Tshirts', …}
-articletype: "Tshirts"
-brandname: "Nike"
-category: "Apparel"
-discount:null
-gender: "Men"
-id: 1163
-price: 895
-productdisplayname: "Sahara Team India Fanwear Round Neck Jersey"
-productionyear: 2011
-season: "Summer"
-soldout: 0
-subcategory: "Topwear"
-usagetype: "Sports" */
